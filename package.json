@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "node --test src/game/*.test.js"
+    "test": "node --test src/game/*.test.js",
+    "build:single": "vite build && node scripts/build-artifact.mjs"
   },
   "dependencies": {
     "react": "^19.1.0",

@@ -275,7 +275,7 @@ export function createGame(seed = Date.now()) {
     const c = randInt(state, COLS), s = 2 + randInt(state, ROWS - 2);
     if (!state.fog.traps[c][s]) { state.fog.traps[c][s] = true; traps++; }
   }
-  for (let c = 0; c < COLS; c++) reveal(state, c, 0); // the enemy front line starts visible
+  for (let c = 0; c < COLS; c++) state.fog.revealed[c][0] = true; // only the enemy front line starts visible
   log(state, 'The battle begins. Drop troops, match 3 to attack, scout the fog.');
   return state;
 }
